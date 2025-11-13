@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karasuno | Haikyuu!!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+  body {
+    scroll-behavior: smooth;
+  }
+
+  h3 {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  
+  @media (max-width: 768px) {
+    header h2 {
+      font-size: 1.8rem;
+    }
+    header p {
+      font-size: 1rem;
+    }
+  }
+
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 3rem 1rem;
+    }
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  
+  <nav class="bg-black text-white py-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold text-orange-500">Karasuno</h1>
+      <ul class="hidden md:flex space-x-6 text-lg">
+        <li><a href="#sobre" class="hover:text-orange-400">Sobre</a></li>
+        <li><a href="#time" class="hover:text-orange-400">Time</a></li>
+      </ul>
+      <button id="menuBtn" class="md:hidden text-orange-400">☰</button>
+    </div>
+  </nav>
+
+  
+  <div id="menuMobile" class="md:hidden hidden bg-black text-white text-center py-2">
+    <a href="#sobre" class="block py-1 hover:text-orange-400">Sobre</a>
+    <a href="#time" class="block py-1 hover:text-orange-400">Time</a>
+  </div>
+
+  
+  <header class="bg-orange-500 text-white py-20 text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Karasuno: “Asas para voar!”</h2>
+    <p class="text-lg md:text-xl mb-6">O time que nunca desiste, sempre buscando alcançar o topo!</p>
+    <a href="#time" class="bg-black text-white px-6 py-3 rounded-lg text-lg hover:bg-gray-800 transition">Conheça o Time</a>
+  </header>
+
+  
+  <section id="sobre" class="container mx-auto px-4 py-12">
+    <h3 class="text-3xl font-bold text-center text-orange-600 mb-6">Sobre o Time</h3>
+    <p class="max-w-2xl mx-auto text-center text-gray-700 leading-relaxed">
+      O Karasuno é conhecido como o “Corvo Caído”, mas graças à chegada de novos talentos,
+      o time voltou a voar alto nas quadras! Liderados por Daichi e com a energia explosiva de Hinata e Kageyama,
+      eles mostram que o verdadeiro poder está no trabalho em equipe e na vontade de vencer.
+    </p>
+  </section>
+
+  
+  <section id="time" class="bg-white py-12">
+    <h3 class="text-3xl font-bold text-center text-orange-600 mb-8">Principais Jogadores</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 container mx-auto px-4">
+      <div class="bg-gray-100 rounded-lg shadow p-6 text-center hover:scale-105 transition">
+        <img src="https://i.redd.it/ozcq99ip9xs41.jpg" alt="Hinata Shoyo" class="w-40 mx-auto mb-4">
+        <h4 class="text-xl font-bold text-orange-600">Hinata Shoyo</h4>
+        <p class="text-gray-700">O pequeno gigante do Karasuno! Energia pura e saltos incríveis.</p>
+      </div>
+
+      <div class="bg-gray-100 rounded-lg shadow p-6 text-center hover:scale-105 transition">
+        <img src="https://th.bing.com/th/id/OIP.F6IMU_bXVWlEestohGs0nAHaHa?w=220&h=220&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.4&pid=1.7&rm=3" alt="Kageyama Tobio" class="w-40 mx-auto mb-4">
+        <h4 class="text-xl font-bold text-orange-600">Kageyama Tobio</h4>
+        <p class="text-gray-700">O "Rei da Quadra", gênio das jogadas e parceiro perfeito de Hinata.</p>
+      </div>
+
+      <div class="bg-gray-100 rounded-lg shadow p-6 text-center hover:scale-105 transition">
+        <img src="https://www.animerankers.com/wp-content/uploads/2022/02/images-10-767x714.jpeg" alt="Nishinoya Yuu" class="w-40 mx-auto mb-4">
+        <h4 class="text-xl font-bold text-orange-600">Nishinoya Yuu</h4>
+        <p class="text-gray-700">O líbero mais destemido! Um escudo humano em forma de corvo.</p>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const menuMobile = document.getElementById('menuMobile');
+    menuBtn.addEventListener('click', () => {
+      menuMobile.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>   
